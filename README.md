@@ -33,3 +33,14 @@ How it works
 5. html then to html
 
 6. document finally to document
+
+# 4
+
+Event delegation is a technique where you attach an event listener to a parent element, which handles events on its child elements. It takes advantage of event bubbling.
+
+Why is event delegation necessary
+
+1. Handling dynamic elements
+2. Improving memory and performance
+3. Making code simpler and more maintainable
+4. Handling multiple element types
