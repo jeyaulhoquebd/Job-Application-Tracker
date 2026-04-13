@@ -16,7 +16,7 @@ function render() {
     const empty = document.getElementById('empty-state');
     const rightCount = document.getElementById('right-job-count');
     
-    // Update Tab UI
+    // Update Tab 
     document.querySelectorAll('button[id^="btn-"]').forEach(btn => btn.classList.remove('tab-active'));
     document.getElementById(`btn-${activeTab}`).classList.add('tab-active');
 
