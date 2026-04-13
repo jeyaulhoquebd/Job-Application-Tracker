@@ -20,7 +20,7 @@ function render() {
     document.querySelectorAll('button[id^="btn-"]').forEach(btn => btn.classList.remove('tab-active'));
     document.getElementById(`btn-${activeTab}`).classList.add('tab-active');
 
-    // Filter Logic iffjf
+    // Filter Logic 
     const filtered = jobsData.filter(job => activeTab === 'all' ? true : job.status === activeTab);
     rightCount.innerText = `${filtered.length} jobs`;
 
