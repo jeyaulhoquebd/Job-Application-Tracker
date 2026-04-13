@@ -47,4 +47,9 @@ Why is event delegation necessary
 
 # 5 
 
-## 1  preventDefault()
+## 1.  preventDefault()
+Disables default browser behavior. Does not affect event bubbling. Disables default behavior. Runs parent event.
+
+## 2. stopPropagation()
+
+Stops event propagation bubbling/capturing. Stops event bubbling. Does not affect default behavior. Does not run parent events.
