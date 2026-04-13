@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .tab-active { background-color: #3b82f6 !important; color: white !important; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] min-h-screen font-sans">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-10">
+        <h1 class="text-3xl font-bold text-[#003366] mb-8">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+                <p class="text-sm font-semibold text-gray-500 mb-1">Total</p>
+                <h2 id="total-count" class="text-4xl font-bold text-[#003366]">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+                <p class="text-sm font-semibold text-gray-500 mb-1">Interview</p>
+                <h2 id="interview-count" class="text-4xl font-bold text-[#10b981]">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+                <p class="text-sm font-semibold text-gray-500 mb-1">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold text-[#ef4444]">0</h2>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center border-b-2 border-blue-500 pb-2 mb-6">
+            <h2 class="text-xl font-bold text-[#003366]">Available Jobs</h2>
+            <p id="right-job-count" class="text-gray-500 font-medium text-sm">0 jobs</p>
+        </div>
+
+        <div class="flex gap-2 mb-8 overflow-x-auto pb-2">
+            <button id="btn-all" onclick="switchTab('all')" class="px-6 py-2 rounded-md bg-white border text-gray-600 text-sm font-medium hover:bg-gray-50 transition-all shadow-sm">All</button>
+            <button id="btn-interview" onclick="switchTab('interview')" class="px-6 py-2 rounded-md bg-white border text-gray-600 text-sm font-medium hover:bg-gray-50 transition-all shadow-sm">Interview</button>
+            <button id="btn-rejected" onclick="switchTab('rejected')" class="px-6 py-2 rounded-md bg-white border text-gray-600 text-sm font-medium hover:bg-gray-50 transition-all shadow-sm">Rejected</button>
+        </div>
+
+        <div id="jobs-list" class="space-y-6">
+            </div>
+
+        <div id="empty-state" class="hidden flex flex-col items-center justify-center py-20 bg-white rounded-xl shadow-sm border border-dashed border-gray-300">
+            <img src="jobs.png" alt="No Jobs" class="w-20 mb-4 opacity-70">
+            <h3 class="text-2xl font-bold text-[#003366]">No jobs available</h3>
+            <p class="text-gray-500 mt-2">Check back soon for new job opportunities</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
