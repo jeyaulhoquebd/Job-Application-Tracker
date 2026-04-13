@@ -17,3 +17,19 @@ C. append() adds to the end of multiple elements or text
 D. prepend() adds to the beginning
 E. after() / before() - adds before/after a specific element
 F. insertAdjacentElement() - more controlled way
+
+# 3
+Event bubbling is a process of event propagation in the DOM where when an event occurs on an element, that event is first handled on that element, then step by step to its parent element, its grandparent, and so on, until it reaches the document object. This is called bubbling.
+How it works
+
+1. button (child) event is handled here first
+
+2. div#parent then goes to parent
+
+3. div#grandparent then goes to grandparent
+
+4. body then to body
+
+5. html then to html
+
+6. document finally to document
